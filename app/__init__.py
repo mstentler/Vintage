@@ -12,11 +12,11 @@ from helpers import JSONEncoder
 
 app = Flask(__name__)
 CORS(app)
-
+# testing this 
 app.register_blueprint(site)
 app.register_blueprint(auth)
 app.register_blueprint(api)
-
+# You know you should add in another blueprint here
 app.json_encoder = JSONEncoder
 app.config.from_object(Config)
 root_db.init_app(app)
